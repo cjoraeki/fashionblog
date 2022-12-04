@@ -2,7 +2,6 @@ package com.example.fashionblog.controller;
 
 
 import com.example.fashionblog.dto.*;
-import com.example.fashionblog.entity.Client;
 import com.example.fashionblog.service.ClientService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,7 @@
 package com.example.fashionblog.dto;
 
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import java.time.LocalTime;
 
@@ -12,7 +13,7 @@ public class CommentDto {
     private Long adminId;
     private Long postId;
     private Long clientId;
+    @NotNull(message = "Comment cannot be empty")
     private String commentContent;
-    private Long commentLikes;
     private LocalTime commentTime;
 }

@@ -19,13 +19,11 @@ public class Admin {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long adminId;
 
-    @Column(length = 20)
     private String businessName;
 
-    @Column(length = 40, unique=true)
+    @Column(unique=true)
     private String email;
 
-    @Column(length = 10)
     private String password;
 
     @OneToMany(mappedBy = "admin", cascade = CascadeType.REMOVE, orphanRemoval = true)

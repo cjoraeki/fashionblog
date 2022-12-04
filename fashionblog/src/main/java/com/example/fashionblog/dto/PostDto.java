@@ -10,7 +10,7 @@ public class PostDto {
 
     private Long postId;
     private Long adminId;
-    @NotNull
+    @NotNull(message = "Post cannot be empty")
     private String postContent;
     private String postCategory;
     private LocalTime postTime;

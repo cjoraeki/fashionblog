@@ -2,7 +2,6 @@ package com.example.fashionblog.service.serviceimpl;
 
 import com.example.fashionblog.dto.AnonymousDto;
 import com.example.fashionblog.entity.Anonymous;
-import com.example.fashionblog.entity.Comment;
 import com.example.fashionblog.entity.Post;
 import com.example.fashionblog.repository.AnonymousRepository;
 import com.example.fashionblog.service.AnonymousService;

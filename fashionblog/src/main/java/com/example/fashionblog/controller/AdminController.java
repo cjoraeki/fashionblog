@@ -4,7 +4,6 @@ package com.example.fashionblog.controller;
 import com.example.fashionblog.dto.AdminLoginDto;
 import com.example.fashionblog.dto.AdminRegisterDto;
 import com.example.fashionblog.dto.AdminResponseDto;
-import com.example.fashionblog.entity.Admin;
 import com.example.fashionblog.service.AdminService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

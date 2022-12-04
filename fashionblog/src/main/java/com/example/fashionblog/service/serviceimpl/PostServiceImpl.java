@@ -3,13 +3,10 @@ package com.example.fashionblog.service.serviceimpl;
 import com.example.fashionblog.dto.PostDto;
 import com.example.fashionblog.entity.Admin;
 import com.example.fashionblog.entity.Post;
-import com.example.fashionblog.repository.AdminRepository;
 import com.example.fashionblog.repository.PostRepository;
 import com.example.fashionblog.service.PostService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalTime;
 
 
@@ -18,7 +15,6 @@ import java.time.LocalTime;
 public class PostServiceImpl implements PostService {
 
     private final PostRepository postRepository;
-    private final AdminRepository adminRepository;
 
     @Override
     public Post makePost(PostDto postDto) {

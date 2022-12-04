@@ -1,11 +1,9 @@
 package com.example.fashionblog.service.serviceimpl;
 
-import com.example.fashionblog.dto.AnonymousDto;
 import com.example.fashionblog.dto.ClientResponseDto;
 import com.example.fashionblog.dto.CommentDto;
 import com.example.fashionblog.entity.*;
 import com.example.fashionblog.repository.*;
-import com.example.fashionblog.service.AnonymousService;
 import com.example.fashionblog.service.CommentService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
@@ -17,7 +15,6 @@ import org.springframework.stereotype.Service;
 public class CommentServiceImpl implements CommentService {
 
     private final CommentRepository commentRepository;
-
 
     @Override
     public Comment clientComment(CommentDto commentDto, ClientResponseDto clientResponseDto) {
