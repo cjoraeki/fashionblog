@@ -28,8 +28,8 @@ public class PostServiceImpl implements PostService {
         post.setPostId(postDto.getPostId());
         post.setPostTime(LocalTime.now());
         post.setPostContent(postDto.getPostContent());
+        post.setPostCategory(postDto.getPostCategory());
         post.setAdmin(admin);
-//        BeanUtils.copyProperties(postDto, post);
 
         return postRepository.save(post);
     }

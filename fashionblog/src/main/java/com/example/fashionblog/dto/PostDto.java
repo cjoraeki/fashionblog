@@ -12,6 +12,6 @@ public class PostDto {
     private Long adminId;
     @NotNull
     private String postContent;
-    private Long postLikes;
+    private String postCategory;
     private LocalTime postTime;
 }

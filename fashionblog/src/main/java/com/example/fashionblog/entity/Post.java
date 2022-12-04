@@ -21,7 +21,7 @@ public class Post {
 
     private String postContent;
 
-    private Long postLikes;
+    private String postCategory;
 
     @CreationTimestamp
     private LocalTime postTime;

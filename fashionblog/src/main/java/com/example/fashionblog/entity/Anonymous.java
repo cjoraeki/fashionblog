@@ -13,7 +13,7 @@ import java.util.Set;
 @Entity
 @Builder
 @ToString
-@Table(name = "anon")
+@Table(name = "anonymous")
 public class Anonymous {
 
     @Id

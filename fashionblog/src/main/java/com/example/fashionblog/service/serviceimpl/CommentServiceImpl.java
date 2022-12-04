@@ -5,23 +5,18 @@ import com.example.fashionblog.dto.ClientResponseDto;
 import com.example.fashionblog.dto.CommentDto;
 import com.example.fashionblog.entity.*;
 import com.example.fashionblog.repository.*;
+import com.example.fashionblog.service.AnonymousService;
 import com.example.fashionblog.service.CommentService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-
-import java.beans.Transient;
 
 
 @Service
 @AllArgsConstructor
 public class CommentServiceImpl implements CommentService {
 
-    private final ClientRepository clientRepository;
     private final CommentRepository commentRepository;
-    private final AdminRepository adminRepository;
-    private final PostRepository postRepository;
-    private final AnonymousRepository anonymousRepository;
 
 
     @Override

@@ -5,5 +5,5 @@ import com.example.fashionblog.entity.Anonymous;
 
 public interface AnonymousService {
 
-    Anonymous anonComment(AnonymousDto anonymousDto);
+    Anonymous anonymousComment(AnonymousDto anonymousDto);
 }

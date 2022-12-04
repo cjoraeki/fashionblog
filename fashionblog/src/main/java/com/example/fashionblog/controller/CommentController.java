@@ -35,7 +35,7 @@ public class CommentController {
 
     @PostMapping("/anonymous")
     public ResponseEntity<Anonymous> anonymousCommentToPost(@RequestBody AnonymousDto anonymousDto){
-        Anonymous anonymous = anonymousService.anonComment(anonymousDto);
+        Anonymous anonymous = anonymousService.anonymousComment(anonymousDto);
         return new ResponseEntity<>(anonymous, HttpStatus.CREATED);
     }
 }

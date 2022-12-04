@@ -17,17 +17,15 @@ public class Like {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long likeId;
 
-    private Long likePost;
-
     @ManyToOne
-    @JoinColumn(name = "postId", nullable = false)
+    @JoinColumn(name = "postId", nullable = true)
     private Post post;
 
     @ManyToOne
-    @JoinColumn(name = "clientId", nullable = false)
+    @JoinColumn(name = "clientId", nullable = true)
     private Client client;
 
     @ManyToOne
-    @JoinColumn(name = "anonId", nullable = false)
+    @JoinColumn(name = "anonId", nullable = true)
     private Anonymous anonymous;
 }

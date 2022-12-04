@@ -25,17 +25,13 @@ public class LikeServiceImpl implements LikeService {
 
     @Override
     public Like likePost(LikeDto likeDto){
-        Client client = clientRepository.findById(likeDto.getClientId()).get();
+        Client client = new Client();
         client.setClientId(likeDto.getClientId());
-        Post post = postRepository.findById(likeDto.getPostId()).get();
+        Post post = new Post();
         post.setPostId(likeDto.getPostId());
-
         Like like = new Like();
-        if(like.getLikePost() == 0L){
-            like.setLikePost(likeDto.getLikePost() + 1);
-        }
-
-
+        like.setClient(client);
+        like.setPost(post);
 
         return likeRepository.save(like);
     }

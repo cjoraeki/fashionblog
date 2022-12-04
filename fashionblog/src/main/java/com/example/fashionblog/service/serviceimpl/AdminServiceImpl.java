@@ -3,7 +3,6 @@ package com.example.fashionblog.service.serviceimpl;
 import com.example.fashionblog.dto.AdminLoginDto;
 import com.example.fashionblog.dto.AdminRegisterDto;
 import com.example.fashionblog.dto.AdminResponseDto;
-import com.example.fashionblog.dto.PostDto;
 import com.example.fashionblog.entity.Admin;
 import com.example.fashionblog.exception.ResourceNotFoundException;
 import com.example.fashionblog.repository.AdminRepository;
