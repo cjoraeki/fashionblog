@@ -19,11 +19,13 @@ public class AdminServiceImpl implements AdminService {
     private AdminRepository adminRepository;
 
     @Override
-    public Admin signUpAdmin(AdminRegisterDto adminRegisterDto) {
+    public AdminResponseDto signUpAdmin(AdminRegisterDto adminRegisterDto) {
         Admin admin = new Admin();
         BeanUtils.copyProperties(adminRegisterDto, admin);
-
-        return adminRepository.save(admin);
+        admin = adminRepository.save(admin);
+        AdminResponseDto adminResponseDto = new AdminResponseDto();
+        BeanUtils.copyProperties(admin, adminResponseDto);
+        return adminResponseDto;
     }
 
     @Override
@@ -38,9 +40,6 @@ public class AdminServiceImpl implements AdminService {
         return adminResponseDto;
     }
 
-    @Override
-    public void deleteAdminById(AdminResponseDto adminResponseDto){
-        adminRepository.deleteById(adminResponseDto.getAdminId());
-    }
+
 
 }

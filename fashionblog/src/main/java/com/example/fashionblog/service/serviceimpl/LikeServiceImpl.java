@@ -17,7 +17,7 @@ public class LikeServiceImpl implements LikeService {
     private final LikeRepository likeRepository;
 
     @Override
-    public Like likePost(LikeDto likeDto){
+    public Like likeAndUnlikePost(LikeDto likeDto){
         Client client = new Client();
         client.setClientId(likeDto.getClientId());
         Post post = new Post();
@@ -26,6 +26,12 @@ public class LikeServiceImpl implements LikeService {
         like.setClient(client);
         like.setPost(post);
 
-        return likeRepository.save(like);
+        Like like1 = likeRepository.findByClientAndPost(client,post).orElse(null);
+            if (like1 != null){
+                likeRepository.delete(like1);
+        }else {
+                likeRepository.save(like);
+        }
+            return like;
     }
 }

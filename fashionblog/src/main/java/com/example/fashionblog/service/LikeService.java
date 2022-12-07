@@ -6,5 +6,5 @@ import com.example.fashionblog.entity.Like;
 
 public interface LikeService {
 
-    Like likePost(LikeDto likeDto);
+    Like likeAndUnlikePost(LikeDto likeDto);
 }

@@ -20,9 +20,9 @@ public class AdminController {
     private AdminService adminService;
 
     @PostMapping("/register")
-    public ResponseEntity<String> toRegisterAdmin(@Valid @RequestBody AdminRegisterDto adminRegisterDto){
-        adminService.signUpAdmin(adminRegisterDto);
-        return new ResponseEntity<>("Admin successfully registered", HttpStatus.CREATED);
+    public ResponseEntity<AdminResponseDto> toRegisterAdmin(@Valid @RequestBody AdminRegisterDto adminRegisterDto){
+        AdminResponseDto adminResponseDto = adminService.signUpAdmin(adminRegisterDto);
+        return new ResponseEntity<>(adminResponseDto, HttpStatus.CREATED);
     }
 
     @PostMapping("/login")
@@ -31,9 +31,5 @@ public class AdminController {
         return new ResponseEntity<>(admin, HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping("/delete")
-    public ResponseEntity<String> toDeleteAdmin(@Valid @RequestBody AdminResponseDto adminResponseDto){
-        adminService.deleteAdminById(adminResponseDto);
-        return new ResponseEntity<>("Admin deleted", HttpStatus.OK);
-    }
+
 }

@@ -23,7 +23,7 @@ public class LikeController {
 
     @PostMapping("/likepost")
     public ResponseEntity<Like> toLikeAPostOnClick(@Valid @RequestBody LikeDto likeDto){
-        Like like = likeService.likePost(likeDto);
+        Like like = likeService.likeAndUnlikePost(likeDto);
         return new ResponseEntity<>(like, HttpStatus.ACCEPTED);
     }
 }

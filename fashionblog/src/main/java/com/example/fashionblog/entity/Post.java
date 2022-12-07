@@ -1,6 +1,7 @@
 package com.example.fashionblog.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
